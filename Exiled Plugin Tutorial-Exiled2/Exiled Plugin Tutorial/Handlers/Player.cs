@@ -6,13 +6,13 @@ namespace Exiled_Plugin_Tutorial.Handlers
 {
     class Player
     {
-        public void OnLeft(LeftEventArgs ev)
+        public void OnLeft(DestroyingEventArgs ev)
         {
             string message = Main.config.LeftMessage.Replace(oldValue: "{player}", newValue: ev.Player.Nickname);
             Map.Broadcast(duration: 6, message);
         }
 
-        public void OnJoined(JoinedEventArgs ev)
+        public void OnJoined(VerifiedEventArgs ev)
             {
             string message = Main.config.JoinedMessage.Replace(oldValue: "{player}", newValue: ev.Player.Nickname);
             Map.Broadcast(duration: 6, message);
