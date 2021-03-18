@@ -12,7 +12,7 @@ namespace Exiled_Plugin_Tutorial.Handlers
 
         public void OnRoundStarted()
         {
-            Map.Broadcast(duration: 6,TutorialPlugin.Instance.Config.RoundStartedMessage);
+            Map.Broadcast(duration: 6, Main.config.RoundStartedMessage);
         }
 
     }
