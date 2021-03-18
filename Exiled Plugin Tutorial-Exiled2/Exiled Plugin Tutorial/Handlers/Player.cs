@@ -8,13 +8,13 @@ namespace Exiled_Plugin_Tutorial.Handlers
     {
         public void OnLeft(LeftEventArgs ev)
         {
-            string message = TutorialPlugin.Instance.Config.LeftMessage.Replace(oldValue: "{player}", newValue: ev.Player.Nickname);
+            string message = Main.config.LeftMessage.Replace(oldValue: "{player}", newValue: ev.Player.Nickname);
             Map.Broadcast(duration: 6, message);
         }
 
         public void OnJoined(JoinedEventArgs ev)
             {
-            string message = TutorialPlugin.Instance.Config.JoinedMessage.Replace(oldValue: "{player}", newValue: ev.Player.Nickname);
+            string message = Main.config.JoinedMessage.Replace(oldValue: "{player}", newValue: ev.Player.Nickname);
             Map.Broadcast(duration: 6, message);
         }
 
@@ -22,7 +22,7 @@ namespace Exiled_Plugin_Tutorial.Handlers
         {
             if (ev.IsAllowed == false)
             {
-                ev.Player.Broadcast(duration: 3, TutorialPlugin.Instance.Config.BoobyTrapMessage);
+                ev.Player.Broadcast(duration: 3, Main.config.BoobyTrapMessage);
                 ev.Player.Kill(DamageTypes.Lure);
             }
         }
