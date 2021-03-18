@@ -72,8 +72,6 @@
     <Compile Include="Handlers\Player.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Handlers\Server.cs" />
-    <Compile Include="TutorialPlugin.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
